@@ -24,4 +24,8 @@ Overlay transparente para clickear pelotitas verdes encima de cualquier video si
 - `Cmd/Ctrl + Shift + O`: alterna “siempre arriba”.
 - `Cmd/Ctrl + Shift + Q`: salir.
 
+## Agentes y PRs
+- Este repo incluye skills de Codex en `.codex/skills/`.
+- Para crear PRs con el skill `pr-fast`, necesitás `gh` instalado y autenticado.
+
 Si querés que quede como app (ejecutable), avisame y lo empaqueto.
