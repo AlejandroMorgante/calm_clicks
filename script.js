@@ -1,9 +1,9 @@
-const canvas = document.getElementById("game");
-const ctx = canvas.getContext("2d");
+const canvas = document.getElementById('game');
+const ctx = canvas.getContext('2d');
 
-const scoreEl = document.getElementById("score");
-const passBtn = document.getElementById("passBtn");
-const quitBtn = document.getElementById("quitBtn");
+const scoreEl = document.getElementById('score');
+const passBtn = document.getElementById('passBtn');
+const quitBtn = document.getElementById('quitBtn');
 
 const state = {
   width: window.innerWidth,
@@ -163,12 +163,12 @@ function draw() {
       ball.y,
       ball.r
     );
-    gradient.addColorStop(0, "rgba(120, 255, 170, 0.95)");
-    gradient.addColorStop(1, "rgba(40, 220, 100, 0.85)");
+    gradient.addColorStop(0, 'rgba(120, 255, 170, 0.95)');
+    gradient.addColorStop(1, 'rgba(40, 220, 100, 0.85)');
 
     ctx.beginPath();
     ctx.fillStyle = gradient;
-    ctx.shadowColor = "rgba(57, 255, 122, 0.45)";
+    ctx.shadowColor = 'rgba(57, 255, 122, 0.45)';
     ctx.shadowBlur = ball.r * 0.6;
     ctx.arc(ball.x, ball.y, ball.r, 0, Math.PI * 2);
     ctx.fill();
@@ -226,11 +226,11 @@ function handleClick(event) {
 
 function setClickThrough(nextValue) {
   state.overlay.clickThrough = nextValue;
-  passBtn.setAttribute("aria-pressed", String(nextValue));
-  passBtn.textContent = nextValue ? "Clicks pasan" : "Clicks se quedan";
+  passBtn.setAttribute('aria-pressed', String(nextValue));
+  passBtn.textContent = nextValue ? 'Clicks pasan' : 'Clicks se quedan';
 }
 
-passBtn.addEventListener("click", async () => {
+passBtn.addEventListener('click', async () => {
   const nextValue = !state.overlay.clickThrough;
   if (window.overlay?.setClickThrough) {
     const nextState = await window.overlay.setClickThrough(nextValue);
@@ -239,12 +239,12 @@ passBtn.addEventListener("click", async () => {
     setClickThrough(nextValue);
   }
 });
-quitBtn.addEventListener("click", () => {
+quitBtn.addEventListener('click', () => {
   if (window.overlay?.quit) window.overlay.quit();
 });
-canvas.addEventListener("pointerdown", handleClick);
+canvas.addEventListener('pointerdown', handleClick);
 
-window.addEventListener("resize", resize);
+window.addEventListener('resize', resize);
 
 resize();
 setClickThrough(false);
