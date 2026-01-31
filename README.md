@@ -35,5 +35,3 @@ Overlay transparente de pelotitas verdes para acompañar videos sin robar atenci
 - Empaquetado como app nativa (macOS/Windows).
 - Ajustes finos del HUD para que sea aún más discreto.
 
-## Notas
-- Si querés versión app, la empaqueto y te dejo un instalador.

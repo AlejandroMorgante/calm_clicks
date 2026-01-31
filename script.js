@@ -25,10 +25,10 @@ const SETTINGS = {
   spawnIntervalCalm: 2200,
   maxBalls: 6,
   maxBallsCalm: 4,
-  minRadius: 22,
-  maxRadius: 54,
+  minRadius: 26,
+  maxRadius: 60,
   splitFactor: 0.7,
-  minSplitRadius: 26,
+  minSplitRadius: 30,
   speed: 0.22,
   speedCalm: 0.15,
 };
