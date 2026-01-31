@@ -5,9 +5,18 @@
   "description": "Overlay transparente de pelotitas verdes para mantener foco.",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "prepare": "husky install",
+    "format": "prettier --write .",
+    "lint": "prettier --check ."
   },
   "devDependencies": {
-    "electron": "^30.5.1"
+    "electron": "^30.5.1",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.2.5"
+  },
+  "lint-staged": {
+    "*.{js,css,html,json,md}": "prettier --write"
   }
 }
