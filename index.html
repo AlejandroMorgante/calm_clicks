@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pelotitas Verdes — Focus Overlay</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="game"></canvas>
+
+    <div id="hud">
+      <div class="row">
+        <span id="score">0</span>
+        <span class="label">clics tranquilos</span>
+      </div>
+      <div class="row">
+        <button id="passBtn" aria-pressed="false">Clicks pasan</button>
+        <button id="quitBtn">Salir</button>
+      </div>
+      <div id="shortcuts" aria-hidden="true">
+        <span class="pill">Cmd/Ctrl+Shift+P</span>
+        <span class="pill">Cmd/Ctrl+Shift+Q</span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

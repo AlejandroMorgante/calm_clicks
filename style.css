@@ -1,0 +1,122 @@
+:root {
+  --green: #39ff7a;
+  --green-soft: rgba(57, 255, 122, 0.65);
+  --green-glow: rgba(57, 255, 122, 0.35);
+  --hud-bg: rgba(10, 18, 14, 0.35);
+  --hud-border: rgba(57, 255, 122, 0.35);
+  --text: rgba(230, 255, 240, 0.9);
+  --text-dim: rgba(230, 255, 240, 0.7);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: transparent;
+  color: var(--text);
+  font-family: "Alegreya Sans", "Trebuchet MS", sans-serif;
+}
+
+#game {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  background: transparent;
+}
+
+#hud {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: var(--hud-bg);
+  border: 1px solid var(--hud-border);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 18px var(--green-glow);
+  font-size: 12px;
+}
+
+#hud .row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#score {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--green);
+  text-shadow: 0 0 10px var(--green-glow);
+}
+
+#hud .label {
+  font-size: 11px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+#shortcuts {
+  display: flex;
+  gap: 6px;
+}
+
+button {
+  appearance: none;
+  border: 1px solid var(--hud-border);
+  background: rgba(14, 28, 20, 0.5);
+  color: var(--text);
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 10px var(--green-glow);
+}
+
+button[aria-pressed="true"] {
+  background: rgba(57, 255, 122, 0.18);
+  border-color: rgba(57, 255, 122, 0.6);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 7px;
+  border-radius: 999px;
+  border: 1px solid var(--hud-border);
+  background: rgba(14, 28, 20, 0.35);
+  color: var(--text-dim);
+  font-size: 10px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 520px) {
+  #hud {
+    left: 10px;
+    bottom: 10px;
+  }
+  #score {
+    font-size: 18px;
+  }
+}

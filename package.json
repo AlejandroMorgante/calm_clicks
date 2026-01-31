@@ -1,0 +1,13 @@
+{
+  "name": "pelotitas-overlay",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Overlay transparente de pelotitas verdes para mantener foco.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^30.5.1"
+  }
+}
