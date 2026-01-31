@@ -21,7 +21,7 @@ body {
   overflow: hidden;
   background: transparent;
   color: var(--text);
-  font-family: "Alegreya Sans", "Trebuchet MS", sans-serif;
+  font-family: 'Alegreya Sans', 'Trebuchet MS', sans-serif;
 }
 
 #game {
@@ -84,7 +84,10 @@ button {
   font-size: 11px;
   letter-spacing: 0.4px;
   cursor: pointer;
-  transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+  transition:
+    transform 120ms ease,
+    box-shadow 120ms ease,
+    background 120ms ease;
 }
 
 button:hover {
@@ -92,7 +95,7 @@ button:hover {
   box-shadow: 0 0 10px var(--green-glow);
 }
 
-button[aria-pressed="true"] {
+button[aria-pressed='true'] {
   background: rgba(57, 255, 122, 0.18);
   border-color: rgba(57, 255, 122, 0.6);
 }
