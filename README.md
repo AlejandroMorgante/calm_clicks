@@ -1,18 +1,21 @@
-# Pelotitas Verdes — Overlay de enfoque
+# Calm Clicks — Overlay de enfoque
 
-Overlay transparente para clickear pelotitas verdes encima de cualquier video sin perder el foco.
+Overlay transparente de pelotitas verdes para acompañar videos sin robar atención.
 
-## Requisitos
-- macOS o Windows
-- Node.js
+## ¿Qué es esto?
+- Un overlay siempre‑arriba, minimalista y calmado.
+- Las pelotitas son un estímulo suave para bajar ansiedad, no un desafío.
+- Proyecto “vibe coding”: también prueba el uso de skills y agentes en el repo.
 
-## Cómo prenderlo
-1. En la terminal, dentro de esta carpeta:
+## Demo rápida
+1) Instalá dependencias
    ```bash
    npm install
+   ```
+2) Corré el overlay
+   ```bash
    npm start
    ```
-2. Se abrirá una ventana transparente siempre‑arriba con las pelotitas.
 
 ## Controles
 - Click/tap: dividir o reventar pelotitas.
@@ -28,4 +31,7 @@ Overlay transparente para clickear pelotitas verdes encima de cualquier video si
 - Este repo incluye skills de Codex en `.codex/skills/`.
 - Para crear PRs con el skill `pr-fast`, necesitás `gh` instalado y autenticado.
 
-Si querés que quede como app (ejecutable), avisame y lo empaqueto.
+## Roadmap corto
+- Empaquetado como app nativa (macOS/Windows).
+- Ajustes finos del HUD para que sea aún más discreto.
+
