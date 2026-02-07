@@ -163,12 +163,12 @@ function draw() {
       ball.y,
       ball.r
     );
-    gradient.addColorStop(0, 'rgba(120, 255, 170, 0.95)');
-    gradient.addColorStop(1, 'rgba(40, 220, 100, 0.85)');
+    gradient.addColorStop(0, 'rgba(255, 120, 120, 0.95)');
+    gradient.addColorStop(1, 'rgba(220, 40, 40, 0.85)');
 
     ctx.beginPath();
     ctx.fillStyle = gradient;
-    ctx.shadowColor = 'rgba(57, 255, 122, 0.45)';
+    ctx.shadowColor = 'rgba(255, 90, 90, 0.45)';
     ctx.shadowBlur = ball.r * 0.6;
     ctx.arc(ball.x, ball.y, ball.r, 0, Math.PI * 2);
     ctx.fill();
@@ -177,7 +177,7 @@ function draw() {
   ctx.shadowBlur = 0;
   for (const p of state.particles) {
     const alpha = Math.max(0, p.life / 600);
-    ctx.fillStyle = `rgba(120, 255, 170, ${alpha})`;
+    ctx.fillStyle = `rgba(255, 120, 120, ${alpha})`;
     ctx.beginPath();
     ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
     ctx.fill();
